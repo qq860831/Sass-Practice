@@ -3,4 +3,93 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 微軟正黑體;
+    
 }
+html,body{
+    height: 3000px;
+}
+// $變數(字首一定要大寫)名稱:變數值
+// 可事先儲存樣式的資料
+$Color:gold;
+$Margin:100px auto;
+
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: $Color;
+    margin: $Margin;
+}
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: $Color;
+    margin: $Margin;
+  }
+// 巢狀結構(nesting)
+// 避免選取器過長
+ul{
+    background-color: #ccc;
+    padding: 30px;
+    list-style: none;
+    li{
+        border:1px solid;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        a{
+            color: #666;
+            font-size: 30px;
+            text-decoration: none;
+        }
+    }
+
+}
+// 匯入@import
+// 專門匯入其他css檔
+@import"https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
+
+// 混入 @mixin
+// 在混入時要搭配@include
+@mixin box {
+    display: inline-block;
+    width: 200px;
+    height: 200px; 
+    line-height: 100px;
+    text-align: center;
+    background-color: #333;
+    font-size: 36px;
+}
+h1{
+    @include box;
+    color:gold;
+}
+h2{
+    @include box;
+    color: blueviolet;
+}
+// 擴展 @extend
+// 讓選擇器可以繼承其他選取器的值
+h3{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: red;
+}
+div{
+    @extend h3;
+    color:white;
+    font-size: 32px;
+    width: 200px;
+}
+// 運算(+、-、*、/)
+.box {
+    display: inline-block;
+    background-color: gold;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: (100%/3);
+    color:white;
+  }
