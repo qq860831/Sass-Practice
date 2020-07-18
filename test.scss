@@ -47,7 +47,7 @@ ul{
 }
 // 匯入@import
 // 專門匯入其他css檔
-@import"https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
+// @import"https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
 
 // 混入 @mixin
 // 在混入時要搭配@include
@@ -83,11 +83,12 @@ div{
     font-size: 32px;
     width: 200px;
 }
-// 運算(+、-、*、/)
+//operators 運算(+、-、*、/)
 .box {
     display: inline-block;
     background-color: gold;
     height: 100px;
+    margin: 20px;
     line-height: 100px;
     text-align: center;
     width: (100%/3);

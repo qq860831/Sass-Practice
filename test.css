@@ -48,7 +48,6 @@ h1 {
   display: inline-block;
   width: 200px;
   height: 200px;
-  border: 2px solid black;
   line-height: 100px;
   text-align: center;
   background-color: #333;
@@ -60,11 +59,35 @@ h2 {
   display: inline-block;
   width: 200px;
   height: 200px;
-  border: 2px solid black;
   line-height: 100px;
   text-align: center;
   background-color: #333;
   font-size: 36px;
   color: blueviolet;
+}
+
+h3, div {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: red;
+}
+
+div {
+  color: white;
+  font-size: 32px;
+  width: 200px;
+}
+
+.box {
+  display: inline-block;
+  background-color: gold;
+  height: 100px;
+  margin: 20px;
+  line-height: 100px;
+  text-align: center;
+  width: 33.33333%;
+  color: white;
 }
 /*# sourceMappingURL=test.css.map */
